@@ -1,0 +1,12 @@
+mainClassName = 'com.blogspot.nombre_temp.gradle.multi_project.hello_world.Example'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Multi-Project Example - Hello World', 'Implementation-Version': version
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+dependencies {
+    compile project(':common')
+}

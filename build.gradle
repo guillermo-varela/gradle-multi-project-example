@@ -1,0 +1,26 @@
+plugins {
+  id 'net.researchgate.release' version '2.0.2'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    project(':hello-world') {
+        apply plugin: 'application'
+    }
+
+    project(':hola-mundo') {
+        apply plugin: 'application'
+    }
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}

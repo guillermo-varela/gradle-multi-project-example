@@ -1,0 +1,12 @@
+mainClassName = 'com.blogspot.nombre_temp.gradle.multi_project.hola_mundo.Example'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Multi-Project Example - Hola Mundo', 'Implementation-Version': version
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+dependencies {
+    compile project(':common')
+}
